@@ -26,7 +26,7 @@ header {
   left:102px;
   width:231px;
   height:121px;
-  background-image:url(https://image.ibb.co/i7YAJz/toysBG.png);
+  background-image:url(img/toys.png);
 }
 .toy {
   position:absolute;
@@ -62,6 +62,7 @@ header {
 }
 .loseContainer {
   display: none;
+  text-align: center;
   position: absolute;
   z-index: 100;
   width: 100%;
@@ -75,6 +76,11 @@ header {
   margin-top: 50px;
   text-align: center;
   color: #fff;
+}
+.loseImg{
+  width: 150px;
+  height: auto;
+  margin-top: 50px;
 }
 #moveContainer {
   position:absolute;

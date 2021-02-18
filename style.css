@@ -1,0 +1,164 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  background-color:#ffffff;
+  overflow:hidden;
+}
+header {
+  margin: 40px 30px;
+}
+#main {
+  position:relative;
+  margin:auto;
+  margin-top: 100px;
+  width:360px;
+  height:460px;
+}
+.logo {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.7em;
+  color: #CEBA51;
+  text-decoration: none;
+}
+#toys {
+  position:absolute;
+  top:210px;
+  left:102px;
+  width:231px;
+  height:121px;
+  background-image:url(https://image.ibb.co/i7YAJz/toysBG.png);
+}
+.toy {
+  position:absolute;
+  top:30px;
+  left:30px;
+  width:50px;
+  height:50px;
+  background-image:url(https://image.ibb.co/n8g2WK/toys.png);
+  background-size:350px 350px;
+  background-position:0 0;
+}
+.winContainer {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: #2D5BA0;
+  border-radius: 5%;
+  text-align: center;
+}
+.winMessage {
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
+}
+.winButton {
+  text-decoration: none;
+  padding: 15px 20px;
+  background: #CEBA51;
+  color: #fff;
+}
+.loseContainer {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: #2D5BA0;
+  border-radius: 5%;
+  transition: width 0.5s;
+}
+.loseMessage{
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
+}
+#moveContainer {
+  position:absolute;
+  top:343px;
+  left:102px;
+  width:231px;
+  height:36px;
+  background:#CEBA51;
+  border:2px solid #898989;
+  border-radius:20px;
+}
+#moveControl {
+  position:absolute;
+  top:-2px;
+  left:-2px;
+  width:36px;
+  height:36px;
+  background:#fff;
+  border:2px solid #898989;
+  border-radius:50%;
+  cursor:pointer;
+}
+#claw {
+  position:absolute;
+  top:65px;
+  left:30px;
+  width:60px;
+  height:260px;
+}
+#clawBar {
+  position:absolute;
+  top:20px;
+  left:27px;
+  width:6px;
+  height:15px;
+  background:#5b5b5b;
+}
+#clawALL {
+  position:absolute;
+  top:0;
+  left:0;
+  width:60px;
+}
+#clawBall {
+  position:absolute;
+  top:31px;
+  left:21px;
+  width:6px;
+  height:6px;
+  border:6px solid #5b5b5b;
+  border-radius:50%;
+}
+#leftClaw {
+  position:absolute;
+  top:36px;
+  left:3px;
+  width:16px;
+  height:25px;
+  border-top:8px solid #5b5b5b;
+  border-left:4px solid #5b5b5b;
+  transform-origin: top right;
+  transform: rotate(-30deg);
+}
+#rightClaw {
+  position:absolute;
+  top:36px;
+  right:3px;
+  width:16px;
+  height:25px;
+  border-top:8px solid #5b5b5b;
+  border-right:4px solid #5b5b5b;
+  transform-origin: top left;
+  transform: rotate(30deg);
+}
+#clawOpen {
+  transform: rotate(0deg);
+}
+@-webkit-keyframes fullsize {
+  from {
+    transform:scale(1) translate(0,0)
+  }
+  to {
+    transform:scale(4) translate(30px,-30px)
+  }
+}
+
+

@@ -34,7 +34,7 @@ header {
   left:30px;
   width:50px;
   height:50px;
-  background-image:url(https://image.ibb.co/n8g2WK/toys.png);
+  background-image:url(img/mickeies.png);
   background-size:350px 350px;
   background-position:0 0;
 }
@@ -55,6 +55,13 @@ header {
   color: #fff;
 }
 .winButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 120px;
+  margin: auto;
+  margin-bottom: 55px;
   text-decoration: none;
   padding: 15px 20px;
   background: #CEBA51;
@@ -166,5 +173,48 @@ header {
     transform:scale(4) translate(30px,-30px)
   }
 }
-
-
+.ticketContainer {
+  background-color: #fff;
+  border: solid #2D5BA0 20px;
+  height: 100%;
+  border-radius: 10%;
+}
+.ticketImage {
+  width: 320px;
+  border-radius: 7% 7% 0 0;
+}
+.ticketTextarea {
+  position: relative;
+  padding: 80px 20px;
+}
+.ticketQR {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  border: solid 7px #E3E3E3;
+}
+.ticketCharacter {
+  position: absolute;
+  top: -80px;
+  width: 80px;
+  right: 5%;
+}
+.ticketType {
+  color: #ccc;
+  margin: 0;
+}
+.ticketName {
+  margin-top: 3px;
+}
+.ticketAdult {
+  margin-bottom: 0;
+}
+.ticketDate {
+  margin: 0;
+}

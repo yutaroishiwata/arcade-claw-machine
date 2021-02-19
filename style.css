@@ -172,9 +172,29 @@ header {
 }
 .ticketContainer {
   background-color: #fff;
-  border: solid #2D5BA0 20px;
   height: 100%;
   border-radius: 10%;
+}
+.ticketContainerBlue {
+  border: solid #2D5BA0 20px;
+}
+.ticketContainerBrown {
+  border: solid #BA771E 20px;
+}
+.ticketContainerGreen {
+  border: solid #6EB72E 20px;
+}
+.ticketContainerLightblue {
+  border: solid #7BCBEF 20px;
+}
+.ticketContainerOrange {
+  border: solid #F9AF2B 20px;
+}
+.ticketContainerPink {
+  border: solid #F48484 20px;
+}
+.ticketContainerPurple {
+  border: solid #6856D6 20px;
 }
 .ticketImage {
   width: 320px;

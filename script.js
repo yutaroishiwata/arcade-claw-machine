@@ -1,5 +1,6 @@
 var isDragging = false;
 var toyOffset;
+var htmlToyimg;
 $(document).ready(function() {
   $("body").on("click","#b_drop",function() {
     toyOffset = $(".toy").offset();
@@ -25,8 +26,8 @@ $(document).ready(function() {
           // WIN (TAKE THE TOY)
           $("#clawALL,#clawBar").stop();
           closeClaws();
-          var bgPos = $(".toy").css("background-position");
-          var htmlToy = "<div class='toy' style='background-position:"+(bgPos)+";top:35px;left:6px;'></div>";
+          // var bgPos = $(".toy").css("background-position");
+          var htmlToy = "<img class='toy' src="+(htmlToyimg)+" style='top:35px;left:6px;'>";
           $(".toy").remove();
           $("#clawALL").append(htmlToy);
           $("#clawBar").stop().animate({
@@ -58,6 +59,11 @@ $(document).ready(function() {
                     complete: function() {
                       $(".toy").css({
                         "z-index":"100",
+                        "width": "38px",
+                        "top": "245px",
+                        "left": "0px",
+                        "right": "0px",
+                        "margin": "auto",
                         "animation":"fullsize 1s 1 linear",
                         "transform":"scale(4) translate(30px,-30px)"
                       });
@@ -124,7 +130,7 @@ $(document).ready(function() {
                   $("#moveContainer").show();
                   $(".toy").remove();
                   placeToy();
-                },300);
+                },10);
               }
             });
           }
@@ -154,12 +160,43 @@ function closeClaws() {
   });
 }
 function placeToy() {
-  var col = Math.floor(Math.random()*7);
-  var row = Math.floor(Math.random()*7);
-  var toyTop = Math.floor(Math.random()*70);
+  // var col = Math.floor(Math.random()*7);
+  // var row = Math.floor(Math.random()*7);
+  var toyTop = Math.floor(Math.random()*50);
   var toyLeft = Math.floor(Math.random()*160);
-  var htmlToy = "<div class='toy' style='background-position:"+(col*50)+"px "+(row*50)+"px;top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'></div>";
+  var select =  Math.floor(Math.random()*7);
+  if(select == 0){
+    var htmlToy = "<img class='toy' src='img/blue.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
+    var htmlToylink = "<a class='winButton' href='purple.html'>チケットの発行</a>";
+    htmlToyimg = 'img/blue.png';
+  } else if(select == 1){
+    var htmlToy = "<img class='toy' src='img/brown.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
+    var htmlToylink = "<a class='winButton' href='brown.html'>チケットの発行</a>";
+    htmlToyimg = 'img/brown.png';
+  } else if(select == 2){
+    var htmlToy = "<img class='toy' src='img/green.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
+    var htmlToylink = "<a class='winButton' href='blue.html'>チケットの発行</a>";
+    htmlToyimg = 'img/green.png';
+  } else if(select == 3){
+    var htmlToy = "<img class='toy' src='img/lightBlue.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
+    var htmlToylink = "<a class='winButton' href='lightBlue.html'>チケットの発行</a>";
+    htmlToyimg = src='img/lightBlue.png';
+  } else if(select == 4){
+    var htmlToy = "<img class='toy' src='img/orange.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
+    var htmlToylink = "<a class='winButton' href='orange.html'>チケットの発行</a>";
+    htmlToyimg = 'img/orange.png';
+  } else if(select == 5){
+    var htmlToy = "<img class='toy' src='img/pink.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
+    var htmlToylink = "<a class='winButton' href='pink.html'>チケットの発行</a>";
+    htmlToyimg = 'img/pink.png';
+  } else {
+    var htmlToy = "<img class='toy' src='img/purple.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
+    var htmlToylink = "<a class='winButton' href='purple.html'>チケットの発行</a>";
+    htmlToyimg = 'img/purple.png';
+  }
   $("#toys").append(htmlToy);
+  $("#winLink").append(htmlToylink);
+  return htmltoy;
 }
 function handle_horizontal(ev) {
   var elem = ev.target;

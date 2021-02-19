@@ -167,7 +167,7 @@ function placeToy() {
   var select =  Math.floor(Math.random()*7);
   if(select == 0){
     var htmlToy = "<img class='toy' src='img/blue.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
-    var htmlToylink = "<a class='winButton' href='purple.html'>チケットの発行</a>";
+    var htmlToylink = "<a class='winButton' href='blue.html'>チケットの発行</a>";
     htmlToyimg = 'img/blue.png';
   } else if(select == 1){
     var htmlToy = "<img class='toy' src='img/brown.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
@@ -175,7 +175,7 @@ function placeToy() {
     htmlToyimg = 'img/brown.png';
   } else if(select == 2){
     var htmlToy = "<img class='toy' src='img/green.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
-    var htmlToylink = "<a class='winButton' href='blue.html'>チケットの発行</a>";
+    var htmlToylink = "<a class='winButton' href='green.html'>チケットの発行</a>";
     htmlToyimg = 'img/green.png';
   } else if(select == 3){
     var htmlToy = "<img class='toy' src='img/lightBlue.png' style='top:"+(toyTop)+"px;left:"+(toyLeft)+"px;'>";
